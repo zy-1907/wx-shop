@@ -1,0 +1,61 @@
+.home_swiper{
+    swiper{
+      width: 100%;
+      height: calc(340/750 * 100vw);
+      image{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  
+  .home_cate{
+    width: 750rpx;
+    display: flex;
+    navigator{
+      flex:1;
+      padding: 20rpx;
+      image{
+        width: 100%;
+      }
+    }
+  }
+  
+  .home_floor{
+    .floor_group{
+      .floor_title{
+        padding: 10rpx 0;
+        image{
+          width: 100%;
+        }
+      }
+      .floor_list{
+        overflow: hidden;
+        navigator{
+          float: left;
+          width: 33.33%;
+          box-sizing: border-box;
+          //后四个超链接
+          &:nth-last-child(-n+4){
+            /*
+            原图宽高 232*386  
+            232 / 386 = 33.33vw / height
+            height = 33.33vw * 386 / 232 /2
+            因为高度为第一张图的一半所以除以2
+            */
+            height:calc(33.33vw * 386 / 232 /2);
+            border-left: 10rpx solid #fff;
+          }
+          /*2 3 超链接*/
+          &:nth-child(2),
+          &:nth-child(3){
+            border-bottom:10rpx solid #fff;
+          }
+          image{
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }

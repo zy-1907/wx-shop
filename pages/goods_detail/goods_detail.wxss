@@ -1,0 +1,8 @@
+.detail_swiper swiper {
+  height: 65vw;
+  border-color: red;
+  text-align: center;
+}
+.detail_swiper swiper image {
+  width: 60%;
+}
