@@ -1,4 +1,5 @@
 /**app.wxss**/
+@import "./style/iconfont.wxss";
 
 page,view,text,swiper,swiper-item,image,navigator{
   /*

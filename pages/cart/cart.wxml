@@ -1,2 +1,46 @@
-<!--pages/cart/cart.wxml-->
-<text>pages/cart/cart.wxml</text>
+<!-- 收货地址 -->
+<view class="revice_address_row">
+  <!-- 当收货地址 不存在 按钮显示 -->
+  <view class="address_btn" wx:if="{{!address}}">
+    <button bindtap="handleChooseAddress" type="primary" plain>获取收获地址</button>
+  </view>
+  <!-- 当收货地址 存在 详细信息就显示-->
+  <view wx:else class="user_info_row">
+    <view class="user_info">
+      <view>{{address.userName}}</view>
+      <view>{{address.provinceName+address.cityName+address.countyName+address.detailInfo}}</view>
+    </view>
+    <view class="user_phone">{{address.telNumber}}</view>
+  </view>
+</view>
+
+<!-- 购物车内容 -->
+<view class="cart_content">
+  <view class="cart_title">购物车</view>
+  <view class="cart_main">
+    <view class="cart_item">
+      <!-- 复选框 -->
+      <view class="cart_chk_wrap">
+        <checkbox-group bindchange="">
+          <checkbox></checkbox>
+        </checkbox-group>
+      </view>
+      <!-- 商品图片 -->
+      <navigator class="cart_img_wrap">
+        <image mode="widthFix" src="/pages/goods_list/hj.png"></image>
+      </navigator>
+      <!-- 商品信息 -->
+      <view class="cart_info_wrap">
+        <view class="goods_name">海信(Hisense)LED75E7U 75英寸巨幕大屏 4K超高清 HDR 丰富影视教育资源 人工智能液晶平板电视</view>
+        <view class="goods_price_wrap">
+          <view class="goods_price">￥999</view>
+          <view class="cart_num_tool">
+            <view class="num_edit">-</view>
+            <view class="goods_num">10</view>
+            <view class="num_edit">+</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
