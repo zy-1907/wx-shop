@@ -6,9 +6,10 @@
     "pages/user/user",
     "pages/search/search",
     "component/SearchInput/SearchInput",
+    "component/Tabs/Tabs",
     "pages/goods_list/goods_list",
     "pages/goods_detail/goods_detail",
-    "component/Tabs/Tabs"
+    "pages/pay/pay"
   ],
   "window": {
     "backgroundTextStyle": "light",
